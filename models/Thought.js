@@ -28,9 +28,15 @@ const thoughtSchema = new Schema(
   {
     toJSON: {
       getters: true,
+      virtuals: true,
     },
   }
 );
+
+thoughtSchema.virtual('reactionCount').get(function () {
+  //retrieve the length of the thought's reactions array field on query
+  return this.reactions.length;
+});
 
 const Student = model('student', thoughtSchema);
 
