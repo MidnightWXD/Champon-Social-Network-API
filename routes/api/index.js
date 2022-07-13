@@ -3,6 +3,6 @@ const courseRoutes = require('./userRoutes');
 const studentRoutes = require('./thoughtRoutes');
 
 router.use('/users', courseRoutes);
-router.use('/thoughts', studentRoutes);
+// router.use('/thoughts', studentRoutes);
 
 module.exports = router;

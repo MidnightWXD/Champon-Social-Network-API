@@ -114,9 +114,9 @@ const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 // Gets a random full name
 const getRandomName = () =>
-  `${getRandomArrItem(names)}`;
+  `${getRandomArrItem(names)}${getRandomArrItem(names)}`;
 
-// Function to generate random assignments that we can add to student object.
+
 const getRandomEmail = (name) => {
   return `${name}@${getRandomArrItem(emailCompany)}`;
 };
