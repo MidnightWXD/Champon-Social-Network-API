@@ -1,4 +1,6 @@
+
 const { User, Thought } = require('../models');
+
 
 module.exports = {
 
@@ -70,7 +72,7 @@ module.exports = {
     deleteUserFriend(req, res) {
         //remove friend from user's friends array
         User.findOneAndUpdate({ _id: req.params.userId }, { $pull: { friends: req.params.friendId } }, { new: true })
-        .then(user => res.json(user))
+        .then(res.json({ message: 'Friend deleted' }))
         .catch(err => {
             console.log(err);
             res.status(500).json({ message: 'Internal server error' });

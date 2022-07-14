@@ -15,8 +15,6 @@ connection.once('open', async () => {
         const email = `${getRandomEmail(username)}`;
 
         users.push({
-            thoughts: [],
-            friends: [],
             username,
             email,
         });
